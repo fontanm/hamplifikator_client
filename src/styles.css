@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+
+ body{
+   margin-top:70px;
+ }
+ @media(max-width: 768px){
+   body{
+     margin-top:180px;
+    }
+ }

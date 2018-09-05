@@ -1,0 +1,25 @@
+<form #tweetForm="ngForm" (submit)="searchcall()">
+  <div class="form-group">
+    <select class="form-control" id="author" required [(ngModel)]="author" [ngModelOptions]="{standalone: true}">
+      <option slected value="SociologPetrHam">Petr Hampl</option>
+      <option value="PrezidentMluvci">Jiri Ovcacek</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary" >Create Tweeet</button>
+</form>
+<div *ngIf="showTweet">
+  <div class="media m-3 p-3 w-75 bg-warning rounded border border-light" id="tweet">
+    <img class="mr-3" [src]="user_image_data" alt={{show_user_name}}>
+    <div class="media-body" title={{tweetorigin}}>
+      <h5 class="mt-0">{{show_user_name}}</h5>
+      <h6 class="mt-0">@{{show_author}}</h6>
+      {{randomtweet}}
+    </div>
+  </div>
+  <button class="btn" (click)="saveTweet()">Save</button>
+  <div>
+    <p *ngIf="showImage">You can save &amp; use saved images anywhere.</p>
+    <div id="imagetosave"></div>
+  </div>
+</div>
+
