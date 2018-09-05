@@ -1,8 +1,7 @@
 <form #tweetForm="ngForm" (submit)="searchcall()">
   <div class="form-group">
     <select class="form-control" id="author" required [(ngModel)]="author" [ngModelOptions]="{standalone: true}">
-      <option slected value="SociologPetrHam">Petr Hampl</option>
-      <option value="PrezidentMluvci">Jiri Ovcacek</option>
+      <option *ngFor="let auth of authors" [value]="auth.id">{{auth.name}}</option>
     </select>
   </div>
   <button type="submit" class="btn btn-primary" >Create Tweeet</button>

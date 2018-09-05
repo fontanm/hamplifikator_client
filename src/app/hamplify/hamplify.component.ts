@@ -14,6 +14,16 @@ import {ImageService} from '../image.service';
 })
 
 export class HamplifyComponent implements OnInit {
+  authors = [
+    { id: 'SociologPetrHam', name: 'Petr Hampl' },
+    { id: 'PrezidentMluvci', name: 'Jiří Ovčáček' },
+    { id: 'VaclavKlaus_ml', name: 'Václav Klaus ml.' },
+    { id: 'konva333', name: 'Martin Konvička'},
+    { id: 'lubomir_volny', name: 'Lubomír Volný'},
+  ];
+
+  // { id: '', name: ''},
+
   author = 'SociologPetrHam';
   randomtweet = '';
   showTweet = false;
