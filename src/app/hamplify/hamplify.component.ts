@@ -20,6 +20,7 @@ export class HamplifyComponent implements OnInit {
     { id: 'VaclavKlaus_ml', name: 'Václav Klaus ml.' },
     { id: 'konva333', name: 'Martin Konvička'},
     { id: 'lubomir_volny', name: 'Lubomír Volný'},
+    { id: 'FalkonWN', name: 'Komodor'},
   ];
 
   // { id: '', name: ''},

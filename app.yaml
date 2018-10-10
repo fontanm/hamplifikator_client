@@ -17,9 +17,10 @@ skip_files:
 
 handlers:
 
-- url: /
+- url: /(.*\.(gif|png|jpg|css|js|ico)(|\.map))$
+  static_files: dist/abumahlad/\1
+  upload: dist/abumahlad/(.*)(|\.map)
+
+- url: /(.*)
   static_files: dist/abumahlad/index.html
   upload: dist/abumahlad/index.html
-
-- url: /
-  static_dir: dist/abumahlad
