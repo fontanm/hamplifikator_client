@@ -29,13 +29,13 @@ export class HamplifyComponent implements OnInit {
   randomtweet = '';
   showTweet = false;
   showImage = false;
+
   tweetorigin = 'XXX';
   user_image = '';
   isImageLoading = false;
   user_image_data: any;
   user_name = '';
   tweetsdata;
-  imagesSaved = 0;
   show_user_name = '';
   show_author = '';
 
@@ -64,9 +64,7 @@ export class HamplifyComponent implements OnInit {
   saveTweet() {
     const data = document.getElementById('tweet'); // { allowTaint: true }
     html2canvas(data, { allowTaint: true }).then(canvas => {
-        //const imgData = canvas.toDataURL("image/png");
         this.showImage = true;
-        this.imagesSaved++;
         document.getElementById("imagetosave").appendChild(canvas);
     });
   }
@@ -114,6 +112,7 @@ export class HamplifyComponent implements OnInit {
 
 
           });
+
           this.randomtweet = newT;
           this.tweetorigin = newC;
           this.show_author = this.author + '_hAmplified';
@@ -137,8 +136,6 @@ export class HamplifyComponent implements OnInit {
        let reader = new FileReader();
        reader.addEventListener("load", () => {
           this.user_image_data = reader.result;
-          // here you can save base64-image to session/localStorage
-          //localStorage.setItem('yourKey', this.user_image_data);
        }, false);
 
        if (image) {
