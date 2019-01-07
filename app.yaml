@@ -18,9 +18,12 @@ skip_files:
 handlers:
 
 - url: /(.*\.(gif|png|jpg|css|js|ico)(|\.map))$
+  secure: always
   static_files: dist/abumahlad/\1
   upload: dist/abumahlad/(.*)(|\.map)
 
 - url: /(.*)
+  secure: always
   static_files: dist/abumahlad/index.html
   upload: dist/abumahlad/index.html
+
